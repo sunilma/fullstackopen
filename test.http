@@ -1,0 +1,30 @@
+DELETE http://localhost:3001/api/blogs HTTP/1.1
+###
+GET http://localhost:3001/api/blogs HTTP/1.1
+###
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "new blog",
+    "author": "vlad",
+    "url": "www.sun.com"
+}
+###
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "author": "vlad",
+    "url": "www.sun.com"
+}
+###
+DELETE  http://localhost:3001/api/blogs/6057981b1e824c44527406f5 HTTP/1.1
+content-type: application/json
+###
+PUT http://localhost:3001/api/blogs/6057a01ed76d1a4a14edead5 HTTP/1.1
+content-type: application/json
+
+{
+    "likes": "40"
+}
